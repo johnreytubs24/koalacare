@@ -1,0 +1,300 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.app{
+    width:100%;
+    max-width:600px;
+}
+
+.card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:60px;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+h1{
+    text-align:center;
+    color:#111;
+    margin-bottom:5px;
+}
+
+.tagline{
+    text-align:center;
+    color:#666;
+    font-style:italic;
+    margin-bottom:5px;
+}
+
+.section-name{
+    text-align:center;
+    color:#888;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:600;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    background:#FFD400;
+    color:#111;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.secondary{
+    background:#222;
+    color:white;
+}
+
+.message{
+    margin-top:15px;
+    text-align:center;
+    font-weight:600;
+}
+
+.welcome{
+    background:#fff9d6;
+    border-left:5px solid #FFD400;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+.hidden{
+    display:none;
+}
+
+@media(max-width:600px){
+
+    body{
+        padding:10px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    button{
+        padding:15px;
+    }
+
+}
+
+.student-actions{
+    display:flex;
+    gap:10px;
+    margin:15px 0 20px;
+}
+
+.student-actions button{
+    flex:1;
+}
+
+.secondary-btn{
+    background:#111;
+}
+
+.secondary-btn:hover{
+    background:#333;
+}
+
+#myReportsList{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
+}
+
+.my-report-card{
+    background:#fff;
+    border-radius:14px;
+    padding:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    border-left:5px solid #FFD400;
+}
+
+.small-note{
+    color:#666;
+    font-size:14px;
+}
+
+.secondary{
+    background:#555;
+}
+
+.secondary:hover{
+    background:#333;
+}
+.student-actions{
+    display:flex;
+    gap:10px;
+    margin:15px 0 20px;
+}
+
+.student-actions button{
+    flex:1;
+}
+
+.secondary-btn{
+    background:#111;
+    color:white;
+}
+
+.secondary-btn:hover{
+    background:#333;
+}
+
+.small-note{
+    color:#666;
+    font-size:14px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+#myReportsBox h2{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+#myReportsList{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
+}
+
+.my-report-card{
+    background:#fffef5;
+    border-radius:14px;
+    padding:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    border-left:5px solid #FFD400;
+}
+
+.my-report-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.my-status{
+    background:#FFD400;
+    color:#111;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+}
+
+.teacher-response{
+    background:white;
+    border-radius:10px;
+    padding:12px;
+    margin-top:12px;
+    border:1px solid #eee;
+}
+
+.teacher-response p{
+    margin-top:5px;
+    color:#333;
+}
+
+@media(max-width:600px){
+    .student-actions{
+        flex-direction:column;
+    }
+
+    .my-report-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+}
+.message button{
+    margin-top:10px;
+    background:#111;
+    color:white;
+}
+
+.message button:hover{
+    background:#FFD400;
+    color:#111;
+}
+
+.student-badge{
+    background:#ff4d4f;
+    color:white;
+    padding:3px 8px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+    margin-left:5px;
+}
+
+.new-response{
+    display:inline-block;
+    background:#ff4d4f;
+    color:white;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+    margin-top:8px;
+}
+
+.my-reports-btn{
+    position:relative;
+}

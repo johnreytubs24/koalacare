@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KoalaCare Report System</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#FFD400">
+</head>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
+<script src="script.js"></script>
+<body>
+
+  <main class="app">
+    <section class="card">
+      <div class="logo">🐨</div>
+
+      <h1>KoalaCare Report System</h1>
+      <p class="tagline">"Report with kindness. Act with fairness."</p>
+      <p class="section-name">Grade 8 – St. Faustina Kowalska</p>
+
+      <div id="loginBox">
+        <label for="studentCode">Enter your private student code</label>
+        <input type="text" id="studentCode" placeholder="Example: KOA-X7P2" />
+
+        <button onclick="verifyCode()">Continue</button>
+
+        <p id="loginMessage" class="message"></p>
+      </div>
+		<div id="reportBox" class="hidden">
+  <p class="welcome" id="welcomeText"></p>
+
+  <div class="student-actions">
+    <button type="button" onclick="showSubmitForm()">📝 Submit Report</button>
+    <button type="button" class="secondary-btn my-reports-btn" onclick="loadMyReports()">
+	  📬 My Reports <span id="myReportsBadge" class="student-badge hidden">0</span>
+	</button>
+	
+	
+  </div>
+
+  <div id="myReportsBox" class="hidden">
+    <h2>📬 My Reports</h2>
+    <p class="small-note">View the status and teacher response for your submitted reports.</p>
+    <div id="myReportsList"></div>
+  </div>
+
+  <div id="submitFormBox">
+    <label>Incident Date</label>
+    <input type="date" id="incidentDate" />
+
+    <label>Incident Time</label>
+    <input type="time" id="incidentTime" />
+
+    <label>Area / Location</label>
+    <select id="area">
+      <option value="">Select area</option>
+      <option>Classroom</option>
+      <option>Hallway</option>
+      <option>Stairway</option>
+      <option>Comfort Room</option>
+      <option>Canteen</option>
+      <option>Computer Laboratory</option>
+      <option>Library</option>
+      <option>School Grounds</option>
+      <option>Chapel</option>
+      <option>Gymnasium</option>
+      <option>Other</option>
+    </select>
+
+    <label>Person/s Involved</label>
+    <input type="text" id="personInvolved" placeholder="Name/s of person involved" />
+
+    <label>Witness/es</label>
+    <input type="text" id="witnesses" placeholder="Optional" />
+
+    <label>Category</label>
+    <select id="category">
+      <option value="">Select category</option>
+      <option>Behavior Concern</option>
+      <option>Bullying Concern</option>
+      <option>Disrespect</option>
+      <option>Classroom Property</option>
+      <option>Safety Concern</option>
+      <option>Cleanliness Concern</option>
+      <option>Academic Concern</option>
+      <option>Lost and Found</option>
+      <option>Kindness Report</option>
+      <option>Other</option>
+    </select>
+
+    <label>Urgency</label>
+    <select id="urgency">
+      <option>Normal</option>
+      <option>Important</option>
+      <option>Urgent</option>
+    </select>
+
+    <label>Report Details</label>
+    <textarea id="description" rows="5" placeholder="Write what happened clearly and honestly."></textarea>
+
+    <label>Evidence Link</label>
+    <input type="url" id="evidenceLink" placeholder="Optional Google Drive link" />
+
+    <button type="button" onclick="submitReport()">Submit Report</button>
+    <button type="button" class="secondary" onclick="logout()">Use another code</button>
+
+    <p id="reportMessage" class="message"></p>
+  </div>
+</div>
+      
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
